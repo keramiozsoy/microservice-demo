@@ -1,1 +1,1 @@
-# microservice-demo
+# microservice-demo application
