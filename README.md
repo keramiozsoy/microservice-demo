@@ -1,5 +1,7 @@
 # microservice-demo application
 
+Java dilinde basit bir mikroservis uygulaması geliştirelim.
+
 # config server repo 
 
 Projemizdeki dev,prod ortamlarına özel properties dosyaları içeren depodur.
