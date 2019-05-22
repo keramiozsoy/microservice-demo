@@ -27,6 +27,11 @@ Diğer microservislerin tüm config bilgilerini alacağı projedir.
 ```
 
  config server repo projesinde ayarlarda değişiklikler olduğu zaman config server projesini restart etmeksizin son config bilgilerini almamızı sağlayan projedir.
+
+config server bu bilgileri alabilmek için main metodunun olduğu sınıf aşağıdaki interface ile işaretlenmelidir.
+```
+- @EnableConfigServer
+```
  
 
 config server projesinde dev, test , prod ortamlarına göre properties dosyalarını okumak için çalıştırıp şu istekleri yapabiliriz.
