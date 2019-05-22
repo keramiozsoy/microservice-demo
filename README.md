@@ -24,19 +24,24 @@ Diğer microservislerin tüm config bilgilerini alacağı projedir.
  - dependencies : Config Server
 ```
 
-config server, config server repo projesinde ayarlarda değişiklikler olduğu zaman config server projesini restart etmeksizin son config bilgilerini almamızı sağlayan projedir. 
-```
-bootstrap.properties  
-    spring.cloud.config.server.git.uri  // bu property okumayı sağlıyor.
-```
+ config server repo projesinde ayarlarda değişiklikler olduğu zaman config server projesini restart etmeksizin son config bilgilerini almamızı sağlayan projedir.
+ 
+
 config server projesinde dev, test , prod ortamlarına göre properties dosyalarını okumak için şu istekleri yapabiliriz.
 
-config server projesini çalıştırıp istekleri yapalım.
-property dosyalarının ismi ile url üzerinden çağrıyoruz.
+properties dosyalarının ismi ile url üzerinden çağrıyoruz.
 
 ```
 - curl http://localhost:8888/config-server/development
 - curl http://localhost:8888/config-server/production
+```
+
+properties dosyalarını okuyabilmek için url bootstrap isimli property dosyasına yazılmasını sebebi, 
+bootstrap proje çalıştırıldığında ilk çalışacak olan property dosyasıdır.
+
+```
+bootstrap.properties  
+    spring.cloud.config.server.git.uri  // bu property okumayı sağlıyor.
 ```
   
   
