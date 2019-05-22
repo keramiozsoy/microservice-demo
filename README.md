@@ -27,7 +27,7 @@ Diğer microservislerin tüm config bilgilerini alacağı projedir.
  config server repo projesinde ayarlarda değişiklikler olduğu zaman config server projesini restart etmeksizin son config bilgilerini almamızı sağlayan projedir.
  
 
-config server projesinde dev, test , prod ortamlarına göre properties dosyalarını okumak için şu istekleri yapabiliriz.
+config server projesinde dev, test , prod ortamlarına göre properties dosyalarını okumak için çalıştırıp şu istekleri yapabiliriz.
 
 properties dosyalarının ismi ile url üzerinden çağrıyoruz.
 
