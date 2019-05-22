@@ -25,10 +25,10 @@ Diğer microservislerin tüm config bilgilerini alacağı projedir.
 ```
 
 config server, config server repo projesinde ayarlarda değişiklikler olduğu zaman config server projesini restart etmeksizin son config bilgilerini almamızı sağlayan projedir. 
-
+```
 bootstrap.properties  
     spring.cloud.config.server.git.uri  // bu property okumayı sağlıyor.
-
+```
 config server projesinde dev, test , prod ortamlarına göre properties dosyalarını okumak için şu istekleri yapabiliriz.
 
 config server projesini çalıştırıp istekleri yapalım.
