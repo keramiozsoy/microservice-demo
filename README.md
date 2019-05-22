@@ -50,8 +50,5 @@ bootstrap proje çalıştırıldığında ilk çalışacak olan property dosyas�
 bootstrap.properties  
     spring.cloud.config.server.git.uri  // bu property okumayı sağlıyor.
 ```
-  
-  
-=======
 
  - curl http://localhost:8080/actuator/health
