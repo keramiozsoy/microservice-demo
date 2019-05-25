@@ -66,6 +66,7 @@ asıl projeler değişmeden alabilmeliyiz.
 Bunun için actuator yardımı ile refresh endpoint üzerinden POST isteği atarak son config bilgilerin alabilirsiniz.
 Buradaki güzel durum projenin kapamanmadan son bilgileri alabilmesidir.
 
+```
 curl  -X POST http://localhost:8080/actuator/refresh -d '{}' -H "Content-Type: application/json"
-
+```
 
