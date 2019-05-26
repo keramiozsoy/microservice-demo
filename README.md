@@ -35,50 +35,55 @@ Microservislerin tüm konfigürasyon bilgilerini aldığı projedir.
   
  -  ` @EnableConfigServer ` ile projeyi çalıştıran ana sınıf işaretlenmelidir.
  
+ 
  -  ` application ` veya ` bootstrap `  isimli dosyada konfigürasyonu alacağı projenin bilgisi şu şekilde eklemelidir.
     `  spring.cloud.config.server.git.uri=https://github.com/keramiozsoy/microservice-demo-config-server-repo  `
- 
- 
- `config-server` projesi, 
- `microservice-demo-config-server-repo` projesinde konfigürasyon değişikliği olduğunda 
- `config-server` restart edilmeksizin `client` gibi konfigürasyonlar ile çalışan projelere iletebilir.
- 
+    
+    ve hangi klasörde arayacağını aşağıdaki şekilde belirtiyoruz.
+    
+    ` spring.cloud.config.server.git.searchPaths = config-server-configs ` 
+    
 
-config server projesinde dev, test , prod ortamlarına göre properties dosyalarını okumak için çalıştırıp şu istekleri yapabiliriz.
+Istenilen profillere göre konfigürasyonlara ulaşabildiğimizi kontrol edelim.
 
-properties dosyalarının ismi ile url üzerinden çağrıyoruz.
+` / proje / port / properties dosyasının adı / profil  `
 
-```
-- curl http://localhost:8888/config-server/development
-- curl http://localhost:8888/config-server/production
-```
+şeklindeki hiyerarşi ile isteğimizi gerçekleştirelim. Burada hangi klasöre gideceğimiz daha önceden belirtildiğinden
+tekrar belirmemize gerek kalmadan doğrudan dosyalara ulaşabiliyoruz.
 
-properties dosyalarını okuyabilmek için url bootstrap isimli property dosyasına yazılmasını sebebi, 
-bootstrap proje çalıştırıldığında ilk çalışacak olan property dosyasıdır.
+( config-server-development.properties , config-server-production.properties )
 
 ```
-bootstrap.properties  
-    spring.cloud.config.server.git.uri  // bu property okumayı sağlıyor.
-```
+
+  curl http://localhost:8000/config-server/development
+
+  curl http://localhost:8000/config-server/production
 
 ```
- - curl http://localhost:8080/actuator/health
- ```
- 
+
 # client
 
 İş mantığı geliştirdiğimiz projedir. 
 
-Proje seçilen bir profile göre çalışır  ( development,production )
+Proje seçilen bir profile göre development,production çalışır.
 
-config server repo projesinde yani tüm projeyi etkileyen, 
-ayar dosyalarının bulunduğu projede değişiklikler olduğunda son değişiklikleri 
-asıl projeler değişmeden alabilmeliyiz. 
+ `config-server` projesi, 
+ `microservice-demo-config-server-repo` projesinde konfigürasyon değişikliği olduğunda 
+ `config-server` ve `client` restart edilmeksizin `client` gibi konfigürasyonlar ile çalışan projelere iletebilir.
 
-Bunun için actuator yardımı ile refresh endpoint üzerinden POST isteği atarak son config bilgilerin alabilirsiniz.
+Bunun için ` actuator refresh endpoint ` üzerinden POST isteği atarak son konfigürasyon bilgilerin alabilirsiniz.
 Buradaki güzel durum projenin kapamanmadan son bilgileri alabilmesidir.
 
 ```
-curl  -X POST http://localhost:8080/actuator/refresh -d '{}' -H "Content-Type: application/json"
+
+    curl  -X POST http://localhost:8080/actuator/refresh -d '{}' -H "Content-Type: application/json"
+
 ```
+
+Denemek için `microservice-demo-config-server-repo` projesinde değişiklik yapıp `refresh` isteği yapabilir.
+
+veya
+
+Projeler çalışırken daha önceden bilgisayarınıza çekilmiş profillere ait konfigürasyon dosyalarında değişiklikler yaparsanız asıl proje bu değişiklikleri içermeyeceği için `refresh` isteği yapıldığında değiştirilmemiş halini tekrardan
+çekeceği için farkı kavrayabiliriz.
 
