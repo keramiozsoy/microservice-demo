@@ -1,6 +1,6 @@
 # microservice-demo application
 
-Java dilinde basit bir mikroservis uygulaması geliştirelim.
+Java dilinde basit mikroservisler ile çalışan mimari geliştirelim.
 
 # microservice-demo-config-server-repo 
 
