@@ -126,6 +126,7 @@ Bilgilere ulaşabiliyoruz.
 sonuçlarını kontrol etmek isteyebiliriz.
 
 Bunun için ` actuator refresh endpoint ` üzerinden POST isteği atarak son konfigürasyon bilgilerin alabilirsiniz.
+Tabi bu metodun `@RefreshScope` ile işaretlendiğini unutmayalım.
 Buradaki güzel durum projenin kapamanmadan son bilgileri alabilmesidir.
 
 ```
