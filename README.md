@@ -5,11 +5,13 @@ Java dilinde basit bir mikroservis uygulaması geliştirelim.
 # microservice-demo-config-server-repo 
 
 Projemizdeki development, production ortamlarına özel properties dosyaları içeren depodur.
+```
+    git clone https://github.com/keramiozsoy/microservice-demo-config-server-repo.git
     
-  - git clone https://github.com/keramiozsoy/microservice-demo-config-server-repo.git
-  - cd microservice-demo-config-server-repo
-  - git reset --hard 90b03f93c6017a4da5434d34bd5a264f72ff9c0c
-
+    cd microservice-demo-config-server-repo
+    
+    git reset --hard 2dfc9d8d293aa86e0781ac7a328fe4c5f27e532a
+```
 # config-server
 
 Microservislerin tüm konfigürasyon bilgilerini aldığı projedir. 
