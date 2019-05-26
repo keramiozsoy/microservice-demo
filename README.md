@@ -80,11 +80,25 @@ tekrar belirmemize gerek kalmadan doğrudan dosyalara ulaşabiliyoruz.
  - dependencies : Config Client , Actuator , Web , Rest Repositories
 ```
 
-Proje seçilen bir profile göre development,production çalışır.
+Proje seçilen bir profile göre development,production konfigürasyonlarını alarak çalışır.
 
- `config-server` projesi, 
+`config-server` projesi, 
  `microservice-demo-config-server-repo` projesinde konfigürasyon değişikliği olduğunda 
  `config-server` ve `client` restart edilmeksizin `client` gibi konfigürasyonlar ile çalışan projelere iletebilir.
+
+
+
+
+Client projesi  
+    ` application ` veya ` bootstrap `  isimli dosyada konfigürasyonu alacağı projenin `config-server` bilgilerini
+    belirtmelidir.  
+    ` spring.cloud.config.uri=http://localhost:8000 `
+    ` spring.application.name=config-server ` config-server properties dosyasının adı
+    
+    
+    
+    
+    
 
 Bunun için ` actuator refresh endpoint ` üzerinden POST isteği atarak son konfigürasyon bilgilerin alabilirsiniz.
 Buradaki güzel durum projenin kapamanmadan son bilgileri alabilmesidir.
