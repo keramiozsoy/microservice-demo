@@ -2,7 +2,7 @@
 
 Java dilinde basit bir mikroservis uygulaması geliştirelim.
 
-# config server repo 
+# microservice-demo-config-server-repo 
 
 Projemizdeki dev,prod ortamlarına özel properties dosyaları içeren depodur.
     
@@ -10,9 +10,9 @@ Projemizdeki dev,prod ortamlarına özel properties dosyaları içeren depodur.
   - cd microservice-demo-config-server-repo
   - git reset --hard 90b03f93c6017a4da5434d34bd5a264f72ff9c0c
 
-# config server
+# config-server
 
-Diğer microservislerin tüm config bilgilerini alacağı projedir. 
+Microservislerin tüm konfigürasyon bilgilerini aldığı projedir. 
 
 ```
     https://start.spring.io
@@ -26,12 +26,19 @@ Diğer microservislerin tüm config bilgilerini alacağı projedir.
  - dependencies : Config Server
 ```
 
- config server repo projesinde ayarlarda değişiklikler olduğu zaman config server projesini restart etmeksizin son config bilgilerini almamızı sağlayan projedir.
-
-config server bu bilgileri alabilmek için main metodunun olduğu sınıf aşağıdaki interface ile işaretlenmelidir.
-```
-- @EnableConfigServer
-```
+ `microservice-demo-config-server-repo` projesinde tuttuğumuz bilgilere ulaşmamızı sağlayan proje `config-server` dır.
+ 
+ Tüm projeler `config-server` projesine istekte bulunarak son konfigürasyonlar ile çalışırlar.
+ 
+ 
+ Projemizin son konfigürasyonlara ulaşmasını ve bu rolü üstlenmesini sağlamak için, 
+  
+ ` @EnableConfigServer ` ile projenin çalışma sınıfı işaretlenmelidir.
+ 
+ 
+ `config-server` projesi, 
+ `microservice-demo-config-server-repo` projesinde konfigürasyon değişikliği olduğunda 
+ `config-server` restart edilmeksizin `client` gibi konfigürasyonlar ile çalışan projelere iletebilir.
  
 
 config server projesinde dev, test , prod ortamlarına göre properties dosyalarını okumak için çalıştırıp şu istekleri yapabiliriz.
@@ -58,7 +65,8 @@ bootstrap.properties
 # client
 
 İş mantığı geliştirdiğimiz projedir. 
-Config server dan profil ayarlarını development,production alarak çalışır.
+
+Proje seçilen bir profile göre çalışır  ( development,production )
 
 config server repo projesinde yani tüm projeyi etkileyen, 
 ayar dosyalarının bulunduğu projede değişiklikler olduğunda son değişiklikleri 
