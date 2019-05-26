@@ -15,7 +15,7 @@ Projemizdeki development, production ortamlarına özel properties dosyaları i�
 # config-server
 
 Microservislerin tüm konfigürasyon bilgilerini aldığı projedir. 
-Projeye 8000 protundan erişilmektedir.
+Projeye 8000 portundan erişilmektedir.
 
 ```
 
