@@ -65,6 +65,19 @@ tekrar belirmemize gerek kalmadan doğrudan dosyalara ulaşabiliyoruz.
 
 İş mantığı geliştirdiğimiz projedir. 
 
+
+```
+    https://start.spring.io
+    
+ - gradle 5.4.1 
+ - java 1.8
+ - springboot 2.2 (SNAPSHOT) 
+ - group : com.microservice.demo
+ - artifact : client
+ - name : client
+ - dependencies : Config Client , Actuator , Web , Rest Repositories
+```
+
 Proje seçilen bir profile göre development,production çalışır.
 
  `config-server` projesi, 
