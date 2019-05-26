@@ -41,7 +41,7 @@ Microservislerin tüm konfigürasyon bilgilerini aldığı projedir.
  -  ` application ` veya ` bootstrap `  isimli dosyada konfigürasyonu alacağı projenin bilgisi şu şekilde eklemelidir.
     `  spring.cloud.config.server.git.uri=https://github.com/keramiozsoy/microservice-demo-config-server-repo  `
     
-    ve hangi klasörde arayacağını aşağıdaki şekilde belirtiyoruz.
+    ve hangi klasörlerde arama yapılabileceği, ulaşılabileceğini aşağıdaki şekilde belirtiyoruz.
     
     ` spring.cloud.config.server.git.searchPaths = config-server-configs ` 
     
