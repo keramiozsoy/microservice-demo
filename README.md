@@ -93,13 +93,13 @@ Fakat projenin çalışırken kendisinin ulaşabilmesi için şu maddeleri uygul
 
 
 Client projesi   ` application ` veya ` bootstrap `  isimli dosyada konfigürasyonu alacağı  projenin `config-server` istek atılacak uri belirtmelidir.  
-
-` spring.cloud.config.uri=http://localhost:8000 ` 
-
-
+``` 
+spring.cloud.config.uri=http://localhost:8000 
+```
 Client projesi hangi konfigürasyonları alacak ise bunu da aşağıdaki gibi properties dosya ismi ile belirtilmelidir.
-
-` spring.application.name=client-config ` 
+```
+spring.application.name=client-config 
+```
     
 
 Bunun için ` actuator refresh endpoint ` üzerinden POST isteği atarak son konfigürasyon bilgilerin alabilirsiniz.
