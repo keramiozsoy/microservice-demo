@@ -88,9 +88,10 @@ Proje seçilen bir profile göre development,production konfigürasyonlarını a
  `config-server` ve `client` restart edilmeksizin `client` gibi konfigürasyonlar ile çalışan projelere iletebilir.
         
 
-`curl` yardımı ile `client` projesine özel `client-config` isimli konfigürasyon dosyasına ulaşabiliyoruz.
-Fakat projenin çalışırken kendisinin ulaşabilmesi için şu maddeleri uygulamalıyız.
+`curl` yardımı ile `client` projesine özel `client-config` isimli konfigürasyon dosyalarına `config-server`
+projesine istekte bulunarak ulaşabiliyoruz.
 
+Fakat `client` projesinin çalışırken kendi kendine ulaşabilmesi için şu maddeleri uygulamalıyız.
 
 Client projesi   ` application ` veya ` bootstrap `  isimli dosyada konfigürasyonu alacağı  projenin `config-server` istek atılacak uri belirtmelidir.  
 ``` 
@@ -100,7 +101,18 @@ Client projesi hangi konfigürasyonları alacak ise bunu da aşağıdaki gibi pr
 ```
     spring.application.name=client-config 
 ```
-    
+
+
+`client` ve `config-server`  projesini çalıştırıp `client` projesine istek atarak konfigürasyonlar içindeki bir değere nasıl ulaşabileceğimizi görelim.
+
+```
+    curl http://localhost:8001/message 
+```
+Bilgilere ulaşabiliyoruz.
+
+
+`microservice-demo-config-server-repo` projesinde bir değişiklik yapıldığında `message` isteğinin
+sonuçlarını kontrol etmek isteyebiliriz.
 
 Bunun için ` actuator refresh endpoint ` üzerinden POST isteği atarak son konfigürasyon bilgilerin alabilirsiniz.
 Buradaki güzel durum projenin kapamanmadan son bilgileri alabilmesidir.
