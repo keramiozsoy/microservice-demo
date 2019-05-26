@@ -97,7 +97,8 @@ projesine istekte bulunarak ulaşabiliyoruz.
 
 Fakat `client` projesinin çalışırken kendi kendine ulaşabilmesi için şu maddeleri uygulamalıyız.
 
-Client projesi   ` application ` veya ` bootstrap `  isimli dosyada konfigürasyonu alacağı  projenin `config-server` istek atılacak uri belirtmelidir.  
+Client projesi   ` application ` veya ` bootstrap `  isimli dosyada konfigürasyonun nereden alınacağı yani
+ `config-server` projesininin uri bilgisi belirtilmeldir.  
 ``` 
 
     spring.cloud.config.uri=http://localhost:8000 
