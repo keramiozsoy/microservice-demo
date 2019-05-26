@@ -4,7 +4,7 @@ Java dilinde basit bir mikroservis uygulaması geliştirelim.
 
 # microservice-demo-config-server-repo 
 
-Projemizdeki dev,prod ortamlarına özel properties dosyaları içeren depodur.
+Projemizdeki development, production ortamlarına özel properties dosyaları içeren depodur.
     
   - git clone https://github.com/keramiozsoy/microservice-demo-config-server-repo.git
   - cd microservice-demo-config-server-repo
@@ -33,7 +33,10 @@ Microservislerin tüm konfigürasyon bilgilerini aldığı projedir.
  
  Projemizin son konfigürasyonlara ulaşmasını ve bu rolü üstlenmesini sağlamak için, 
   
- ` @EnableConfigServer ` ile projenin çalışma sınıfı işaretlenmelidir.
+ -  ` @EnableConfigServer ` ile projeyi çalıştıran ana sınıf işaretlenmelidir.
+ 
+ -  ` application ` veya ` bootstrap `  isimli dosyada konfigürasyonu alacağı projenin bilgisi şu şekilde eklemelidir.
+    `  spring.cloud.config.server.git.uri=https://github.com/keramiozsoy/microservice-demo-config-server-repo  `
  
  
  `config-server` projesi, 
