@@ -10,7 +10,7 @@ Projemizdeki development, production ortamlarına özel properties dosyaları i�
     
     cd microservice-demo-config-server-repo
     
-    git reset --hard 2dfc9d8d293aa86e0781ac7a328fe4c5f27e532a
+    git reset --hard 3c23090b5c894cedb2286a6312046c21e75122e6
 ```
 # config-server
 
