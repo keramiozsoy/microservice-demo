@@ -18,6 +18,7 @@ Microservislerin tüm konfigürasyon bilgilerini aldığı projedir.
 Projeye 8000 protundan erişilmektedir.
 
 ```
+
     https://start.spring.io
     
  - gradle 5.4.1 
@@ -27,6 +28,7 @@ Projeye 8000 protundan erişilmektedir.
  - artifact : configserver
  - name : configserver
  - dependencies : Config Server
+ 
 ```
 
  `microservice-demo-config-server-repo` projesinde tuttuğumuz bilgilere ulaşmamızı sağlayan proje `config-server` dır.
@@ -70,6 +72,7 @@ tekrar belirmemize gerek kalmadan doğrudan dosyalara ulaşabiliyoruz.
 Projeye 8001 portundan erişilmektedir.
 
 ```
+
     https://start.spring.io
     
  - gradle 5.4.1 
@@ -79,6 +82,7 @@ Projeye 8001 portundan erişilmektedir.
  - artifact : client
  - name : client
  - dependencies : Config Client , Actuator , Web , Rest Repositories
+ 
 ```
 
 Proje seçilen bir profile göre development,production konfigürasyonlarını alarak çalışır.
@@ -95,18 +99,24 @@ Fakat `client` projesinin çalışırken kendi kendine ulaşabilmesi için şu m
 
 Client projesi   ` application ` veya ` bootstrap `  isimli dosyada konfigürasyonu alacağı  projenin `config-server` istek atılacak uri belirtmelidir.  
 ``` 
+
     spring.cloud.config.uri=http://localhost:8000 
+    
 ```
 Client projesi hangi konfigürasyonları alacak ise bunu da aşağıdaki gibi properties dosya ismi ile belirtilmelidir.
 ```
-    spring.application.name=client-config 
+
+    spring.application.name=client-config
+    
 ```
 
 
 `client` ve `config-server`  projesini çalıştırıp `client` projesine istek atarak konfigürasyonlar içindeki bir değere nasıl ulaşabileceğimizi görelim.
 
 ```
+
     curl http://localhost:8001/message 
+    
 ```
 Bilgilere ulaşabiliyoruz.
 
