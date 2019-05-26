@@ -43,7 +43,7 @@ Microservislerin tüm konfigürasyon bilgilerini aldığı projedir.
     
     ve hangi klasörlerde arama yapılabileceği, ulaşılabileceğini aşağıdaki şekilde belirtiyoruz.
     
-    ` spring.cloud.config.server.git.searchPaths = config-server-configs ` 
+    ` spring.cloud.config.server.git.searchPaths = client-project-configs ` 
     
 
 Istenilen profillere göre konfigürasyonlara ulaşabildiğimizi kontrol edelim.
