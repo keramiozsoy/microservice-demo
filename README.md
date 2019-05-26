@@ -92,13 +92,13 @@ Proje seçilen bir profile göre development,production konfigürasyonlarını a
 Fakat projenin çalışırken kendisinin ulaşabilmesi için şu maddeleri uygulamalıyız.
 
 
-
-Client projesi  
-` application ` veya ` bootstrap `  isimli dosyada konfigürasyonu alacağı  projenin `config-server` istek atılacak uri belirtmelidir.  
-
+Client projesi   ` application ` veya ` bootstrap `  isimli dosyada konfigürasyonu alacağı  projenin `config-server` istek atılacak uri belirtmelidir.  
 
 ` spring.cloud.config.uri=http://localhost:8000 ` 
-ayrıca client projesi hangi konfigürasyonları alacak ise bunu da aşağıdaki gibi properties dosya isi ile belirtmeliyiz.
+
+
+Client projesi hangi konfigürasyonları alacak ise bunu da aşağıdaki gibi properties dosya ismi ile belirtilmelidir.
+
 ` spring.application.name=client-config ` 
     
 
