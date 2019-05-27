@@ -142,3 +142,34 @@ veya
 Projeler çalışırken daha önceden bilgisayarınıza çekilmiş profillere ait konfigürasyon dosyalarında değişiklikler yaparsanız asıl proje bu değişiklikleri içermeyeceği için `refresh` isteği yapıldığında değiştirilmemiş halini tekrardan
 çekeceği için farkı kavrayabiliriz.
 
+
+
+# service-discovery
+Tüm ulaşılabilir projelerin bilgilerinin tutulduğu projedir.
+Projeye 8761 portundan erişilmektedir.
+
+```
+
+    https://start.spring.io
+    
+ - gradle 5.4.1 
+ - java 1.8
+ - springboot 2.2 (SNAPSHOT) 
+ - group : com.microservice.demo
+ - artifact : servicediscovery
+ - name : configserver
+ - dependencies :  Eureka Server, Actuator
+ 
+```
+
+ Erişilmek isteyen  `client` gibi iş mantığı geliştirdiğimiz projeler `service-discovery` projesine kendilerinin bilgilerini yazdırırlar. `service-discovery` burada telefon defteri gibi düşünebiliriz. Tüm projelerin bilgisi burada vardır.
+ 
+ 
+ `service-discovery` projesi desteklemek isteği özellikler ile çalışabilmesi için ana sınıfı 
+ `
+ @EnableEurekaServer
+ `
+ ile işaretlenmelidir.
+
+
+
