@@ -131,7 +131,7 @@ Buradaki güzel durum projenin kapamanmadan son bilgileri alabilmesidir.
 
 ```
 
-    curl  -X POST http://localhost:8080/actuator/refresh -d '{}' -H "Content-Type: application/json"
+    curl  -X POST http://localhost:8001/actuator/refresh -d '{}' -H "Content-Type: application/json"
 
 ```
 
