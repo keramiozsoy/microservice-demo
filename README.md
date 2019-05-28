@@ -174,10 +174,15 @@ Projeye 8761 portundan erişilmektedir.
 Kayıt olacak olan projelerin kendilerini çalıştıran ana sınıf `@EnableEurekaClient` veya  `@EnableDiscoveryClient`
 ile işaretlenmelidir.
 
-`@EnableDiscoveryClient`  
- Eureka, ( https://netflix.github.io )
- Consul  (  consul.io ), 
- Zookeeper ( zookeeper.apache.org )  desteklerken , `@EnableEurekaClient` sadece  Netflix tarafından geliştirilen  Eureka yı desteklemektedir. Bu projede Eureka kullanılmaktadır.
+`@EnableDiscoveryClient` seçilirse
+
+     Eureka, ( https://netflix.github.io )
+     Consul  (  https://www.consul.io ), 
+     Zookeeper ( https://zookeeper.apache.org )  
+ 
+ desteklerken , 
+ 
+ `@EnableEurekaClient` sadece Eureka yı desteklemektedir. Bu projede Eureka kullanılmaktadır.
 
 
 
