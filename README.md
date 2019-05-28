@@ -164,7 +164,7 @@ Projeye 8761 portundan erişilmektedir.
 
  Erişilmek isteyen  `client` gibi iş mantığı geliştirdiğimiz projeler `service-discovery` projesine kendilerinin bilgilerini kayıt ettirirler. `service-discovery` burada telefon defteri gibi düşünebiliriz. Tüm projelerin bilgisi burada vardır.
  
-`service-discovery` projesinin ` application ` veya ` bootstrap `  isimli dosyada konfigürasyon dosyasında
+`service-discovery` projesinin ` application ` veya ` bootstrap `  isimli  konfigürasyon dosyasında
 aşağıdaki satırları, kendi kendine kayıt olmaya çalışmasını engellemek ve aynı node lar içinde farklı `service-discovery` varsa onunla iletişime geçmeyi engellemek için eklemeliyiz.
  
 ```
@@ -191,6 +191,19 @@ ile işaretlenmelidir.
 desteklenirken
 
  `@EnableEurekaClient` sadece Eureka yı desteklemektedir. Bu projede Eureka kullanılmaktadır.
+ 
+ `client` uygulamasına `@EnableEurekaClient` ekleyip `application` veya `bootstrap` isimli konfigürasyon dosyasında
+ `service-discovery` url bilgisini eklemeliyiz.
+ 
+```
+eureka.client.serviceUrl.defaultZone= http://127.0.0.1:8761/eureka/
+eureka.client.healthcheck.enabled=true
+eureka.client.lease.duration=5
+## Eureka bu proje çalistiginda kaç sn sonra kendini kayit ettirecegi varsayilan 30sn
+eureka.instance.leaseRenewalIntervalInSeconds=1
+## 
+eureka.instance.leaseExpirationDurationInSeconds=2
+```
 
 
 
