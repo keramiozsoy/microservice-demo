@@ -165,7 +165,7 @@ Projeye 8761 portundan erişilmektedir.
  Erişilmek isteyen  `client` gibi iş mantığı geliştirdiğimiz projeler `service-discovery` projesine kendilerinin bilgilerini kayıt ettirirler. `service-discovery` burada telefon defteri gibi düşünebiliriz. Tüm projelerin bilgisi burada vardır.
  
 `service-discovery` projesinin ` application ` veya ` bootstrap `  isimli dosyada konfigürasyon dosyasında
-aşağıdaki satırları, bu projeninde de bir servis olmasdından kaynaklanan, kendi kendine kayıt olmaya çalışmasını engellemek için eklemeliyiz. (https://stackoverflow.com/questions/33921557/understanding-spring-cloud-eureka-server-self-preservation-and-renew-threshold)
+aşağıdaki satırları, kendi kendine kayıt olmaya çalışmasını engellemek ve aynı node içinde farklı `service-discovery` varsa onunla iletişime geçmeyi engellemek için eklemeliyiz.
  
 ```
 eureka.client.registerWithEureka=false
