@@ -162,14 +162,19 @@ Projeye 8761 portundan erişilmektedir.
  
 ```
 
- Erişilmek isteyen  `client` gibi iş mantığı geliştirdiğimiz projeler `service-discovery` projesine kendilerinin bilgilerini yazdırırlar. `service-discovery` burada telefon defteri gibi düşünebiliriz. Tüm projelerin bilgisi burada vardır.
+ Erişilmek isteyen  `client` gibi iş mantığı geliştirdiğimiz projeler `service-discovery` projesine kendilerinin bilgilerini kayıt ettirirler. `service-discovery` burada telefon defteri gibi düşünebiliriz. Tüm projelerin bilgisi burada vardır.
  
  
- `service-discovery` projesi desteklemek isteği özellikler ile çalışabilmesi için ana sınıfı 
+ `service-discovery` projesi desteklemek isteği özellikler ile çalışabilmesi için yani bir kayıt defteri gibi çalışması için ana sınıfı 
  `
  @EnableEurekaServer
  `
  ile işaretlenmelidir.
+
+Kayıt olacak olan projelerin kendilerini çalıştıran ana sınıf `@EnableEurekaClient` veya  `@EnableDiscoveryClient`
+ile işaretlenmelidir.
+
+`@EnableDiscoveryClient` tüm ____blabla____  desteklerken , `@EnableEurekaClient` sadece  Netflix tarafından geliştirilen https://netflix.github.io Eureka yı desteklemektedir. Bu projede Eureka kullanılmaktadır.
 
 
 
