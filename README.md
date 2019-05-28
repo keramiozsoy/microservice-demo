@@ -196,13 +196,19 @@ desteklenirken
  `service-discovery` url bilgisini eklemeliyiz.
  
 ```
-eureka.client.serviceUrl.defaultZone= http://127.0.0.1:8761/eureka/
-eureka.client.healthcheck.enabled=true
-eureka.client.lease.duration=5
-## Eureka bu proje çalistiginda kaç sn sonra kendini kayit ettirecegi varsayilan 30sn
-eureka.instance.leaseRenewalIntervalInSeconds=1
-## 
-eureka.instance.leaseExpirationDurationInSeconds=2
+
+    eureka.client.serviceUrl.defaultZone= http://127.0.0.1:8761/eureka/
+    eureka.client.healthcheck.enabled=true
+    eureka.client.lease.duration=5
+
+
+    ## Eureka bu proje çalistiginda kaç sn sonra kendini kayit ettirecegi varsayilan 30sn
+    eureka.instance.leaseRenewalIntervalInSeconds=1
+    
+    ## 
+    eureka.instance.leaseExpirationDurationInSeconds=2
+    
+    
 ```
 
 
