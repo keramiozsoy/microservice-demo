@@ -208,6 +208,17 @@ desteklenirken
     ## 
     eureka.instance.leaseExpirationDurationInSeconds=2
     
+    ##    Eureka ya servisler  kayıt olurken varsayılan olarak proje isimleri(hostname) ile kayıt olurlar.
+    #  Kendi bilgisayarımız, sunucu ortamlarında bu isimler ile çalışılabilir. Fakat konteyner bazlı deploy 
+    #  yapılmış uygulamalarınızı düşünürsek, her konteyner oluşturulurken rastgele bir isim ile oluşturulur.
+    #  Konteynerda dns girdisi olmadığı durumda, uygulamalarımızın isimleri(hostname) doğru şekilde 
+    #  çözümlenemeyecektir. Bu nedenle her zaman true olmalıdır.
+    #
+    #  Cloud Native uygulama, temel destekledikleri durumlar,
+    #   kısa ömürlü (ephemerel) ve sunucunun istemciye ait bir bilgisini tutmadığı (stateless) uygulamalardır.
+    #   Bu durumları desteklemek için true olmalıdır. :)
+    eureka.instance.preferIpAddress=true
+    
     
 ```
 
