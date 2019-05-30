@@ -165,7 +165,7 @@ Projeye 8761 portundan erişilmektedir.
  Erişilmek isteyen  `client` gibi iş mantığı geliştirdiğimiz projeler `service-discovery` projesine kendilerinin bilgilerini kayıt ettirirler. `service-discovery` burada telefon defteri gibi düşünebiliriz. Tüm projelerin bilgisi burada vardır.
  
 `service-discovery` projesinin ` application ` veya ` bootstrap `  isimli  konfigürasyon dosyasında
-aşağıdaki satırları, kendi kendine kayıt olmaya çalışmasını engellemek ve  kendi kayıt bilgilerini cache lemeyi engellemek için eklemeliyiz.
+aşağıdaki satırları, kendi kendine kayıt olmaya çalışmasını engellemek ve  client olarak çalışırken alması gereken kayıt defteri(eureka) bilgilerini almaması için eklemeliyiz.
  
 ```
 eureka.client.registerWithEureka=false
