@@ -4,7 +4,7 @@ Java dilinde basit mikroservisler ile çalışan mimari geliştirelim.
 
 # microservice-demo-config-server-repo 
 
-Projemizdeki development, production ortamlarına özel properties dosyaları içeren depodur.
+Projemizdeki development, production ortamlarına özel konfigürasyon(properties) dosyaları içeren depodur.
 ```
     git clone https://github.com/keramiozsoy/microservice-demo-config-server-repo.git
     
