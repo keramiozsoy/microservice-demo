@@ -223,7 +223,7 @@ desteklenirken
     
 ```
 
-Ribbon ile client-site load balancing 104 te
+ Ribbon ile client-site load balancing 104 te
 
 
 
