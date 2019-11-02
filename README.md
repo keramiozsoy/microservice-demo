@@ -168,8 +168,12 @@ Projeye 8761 portundan erişilmektedir.
 aşağıdaki satırları, kendi kendine kayıt olmaya çalışmasını engellemek ve  client olarak çalışırken alması gereken kayıt defteri(eureka) bilgilerini almaması için eklemeliyiz.
  
 ```
+
+##   Ayni sistemde bir çok **service-discovery** olabilmektedir. 
+## Kendini başka **service-discovery** projesine kayıt yapmasini engellemek için aşağıdaki ayarlar verilir
 eureka.client.registerWithEureka=false
 eureka.client.fetchRegistry=false
+
 ```
  
  
