@@ -188,7 +188,7 @@ ile işaretlenmelidir.
      Consul  (  https://www.consul.io ), 
      Zookeeper ( https://zookeeper.apache.org )  
  
-desteklenirken
+desteklemek için genel bir alt yapı sağlanırken
 
  `@EnableEurekaClient` sadece Eureka yı desteklemektedir. Bu projede Eureka kullanılmaktadır.
  
