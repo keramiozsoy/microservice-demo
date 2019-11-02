@@ -223,7 +223,26 @@ desteklemek için genel bir alt yapı sağlanırken
     
 ```
 
- Ribbon ile client-site load balancing 104 te
+ **client** uygulamamiz **service-discovery** uygulamasina artık adını yazdirabilir durumdadır.
+ Ayrıca **client** kendinden farklı uygulamalardan istekleri alip cevaplayabilecek durumdadir. 
+ 
+ **client** uygulamasi **client site load balancing** yapabilmesi için bazı ayarların yapılması gerekmektedir.
+ 
+ **netflix-ribbon** kütüphanesi kullanarak bu durum kolayca gerçekleştirilebilir. 
+ Peki neden böyle bir şeye ihtiyaç var?
+ 
+ *client2* isimli bir uygulama *client* isimli uygulamaya erişmek için istek atsın. 
+ **service-discovery** bu iki uygulamanin yerlerini ve portlarini bilmektedir.
+ *client2* uygulaması *client* uygulamasının ulaşım bilgilerini **service-discovery** den 
+ aldıktan sonra  **netflix-ribbon** kütüphanesi yardımıyla bilgileri kendisine *cache* mekanizmasına kaydeder.
+ Bu kaydetme işlemini uygulama periyodik olarak yaparak bilgilerin son halini tutmayı hedefler. 
+ 
+  **netflix-ribbon** daha sonraki aşamalarda ayrıntılı açıklanacaktır.
+  
+  
+ 
+ 
+ 
 
 
 
