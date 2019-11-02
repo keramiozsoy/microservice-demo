@@ -200,6 +200,12 @@ desteklemek için genel bir alt yapı sağlanırken
     eureka.client.serviceUrl.defaultZone= http://127.0.0.1:8761/eureka/
     eureka.client.healthcheck.enabled=true
     eureka.client.lease.duration=5
+    
+    ## Kendini **service-discovery** projesine kayit et
+    eureka.client.registerWithEureka=true
+    
+    ## **service-discovery** projesinden ulaştığı bilgilerin kendisine kopyasini *cache* olarak almasini sağlar 
+    eureka.client.fetchRegistry=true
 
 
     ## Eureka bu proje çalistiginda kaç sn sonra kendini kayit ettirecegi varsayilan 30sn
