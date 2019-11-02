@@ -169,8 +169,10 @@ aşağıdaki satırları, kendi kendine kayıt olmaya çalışmasını engelleme
  
 ```
 
-##   Ayni sistemde bir çok **service-discovery** olabilmektedir. 
-## Kendini başka **service-discovery** projesine kayıt yapmasini engellemek için aşağıdaki ayarlar verilir
+##  Ayni sistemde bir çok **service-discovery** olabilmektedir. 
+## Kendini başka **service-discovery** projesine kayıt yapmasini
+## engellemek için aşağıdaki ayarlar verilir
+
 eureka.client.registerWithEureka=false
 eureka.client.fetchRegistry=false
 
@@ -232,6 +234,14 @@ desteklemek için genel bir alt yapı sağlanırken
     
     
 ```
+
+ Tüm uygulamaların toplu halde xml formatında bilgilerin almak istersek şu url bilgisini
+ kullanabiliriz
+ 
+ ```
+ http://localhost:8761/eureka/apps
+ 
+ ```
 
  **client** uygulamamiz **service-discovery** uygulamasina artık adını yazdirabilir durumdadır.
  Ayrıca **client** kendinden farklı uygulamalardan istekleri alip cevaplayabilecek durumdadir. 
