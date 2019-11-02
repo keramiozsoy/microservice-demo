@@ -235,8 +235,9 @@ desteklemek için genel bir alt yapı sağlanırken
     
 ```
 
- Tüm uygulamaların toplu halde xml formatında bilgilerin almak istersek şu url bilgisini
- kullanabiliriz
+ Tüm uygulamaların toplu halde bilgilerini almak istersek şu url bilgisini
+ kullanabiliriz. Varsayılan olarak xml formatında veri sağlanmaktadır.
+ Fakat **header** json olarak istek atılarak json veri formatında dönüş sağlanabilir.
  
  ```
  http://localhost:8761/eureka/apps
