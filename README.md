@@ -215,7 +215,7 @@ desteklemek için genel bir alt yapı sağlanırken
     #  Konteynerda dns girdisi olmadığı durumda, uygulamalarımızın isimleri(hostname) 
     # doğru şekilde  çözümlenemeyecektir. Bu nedenle her zaman true olmalıdır.
     #
-    #  Cloud Native uygulama, temel destekledikleri durumlar, kısa ömürlü (ephemerel) ve 
+    #  Cloud Native uygulamalar, temel destekledikleri durumlar, kısa ömürlü (ephemerel) ve 
     #   sunucunun istemciye ait bir bilgisini  tutmadığı (stateless) uygulamalardır.
     #   Bu durumları desteklemek için true olmalıdır. :)
     eureka.instance.preferIpAddress=true
