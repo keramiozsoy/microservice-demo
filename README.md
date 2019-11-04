@@ -263,6 +263,9 @@ Bu kaydetme işlemini uygulama periyodik olarak yaparak bilgilerin son halini tu
 **netflix-ribbon** daha sonraki aşamalarda ayrıntılı açıklanacaktır.
   
   
+ ## Projeden projeye rest istekleri nasil atılır ?
+ 
+ 
  
  
  
