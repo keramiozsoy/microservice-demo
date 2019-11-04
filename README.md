@@ -262,7 +262,11 @@ Bu kaydetme işlemini uygulama periyodik olarak yaparak bilgilerin son halini tu
  
 **netflix-ribbon** daha sonraki aşamalarda ayrıntılı açıklanacaktır.
   
-  
+
+# client2 
+
+**client** projesine yardımcı olmak için oluşturulmuştur.
+
  ## Projeden projeye rest istekleri nasil atılır ?
  
  
