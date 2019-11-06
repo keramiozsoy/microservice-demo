@@ -323,7 +323,7 @@ curl --request GET http://localhost:8002/call/3
  Yukarıdaki yöntemlerden sadece birini seçerek tüm projenizdeki isteklerin çalışmasını sağlayabilirsiniz.
  
 
-
+# Netflix Hystrix
 
 
 
