@@ -267,7 +267,29 @@ Bu kaydetme işlemini uygulama periyodik olarak yaparak bilgilerin son halini tu
 
 **client** projesinin bir kopyasi olup bazı yardımcı fonksiyonlar eklenmiştir.
 
- ## Projeden projeye rest istekleri nasil atılır ?
+ ## Spring kullanırken projeden projeye rest isteklerini nasil atabiliriz ?
+ 
+ Bu durumu gerçekleştirebileceğimiz 3 farklı yol mevcuttur.
+ - Spring Discovery kullanarak
+ - Spring Discovery ve RestTemplate beraber kullanarak
+ - Netflix Fiegn kullanarak
+ 
+ Her durumu örnekler ile açıklamak için **client** ve  **client2** projelerindeki geliştirmelere bakalım.
+ 
+ ### Spring Discovery kullanarak
+ 
+ Kendisini **service-discovery**  projesinde kayıt yaptıran tüm projeler arasından ulaşmak istediğimize 
+ **service-discovery** üzerinden proje adı ile erişerek istek atılmasıdır.
+ 
+ ```
+ https://github.com/keramiozsoy/microservice-demo/blob/master/client2/src/main/java/com/microservice/demo/client2/restTypes/TypeOneWithDiscoveryClient.java
+ 
+ ```
+ 
+ ### Spring Discovery ve RestTemplate beraber kullanarak
+ 
+ 
+ 
  
  
  
