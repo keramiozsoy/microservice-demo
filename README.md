@@ -265,7 +265,7 @@ Bu kaydetme işlemini uygulama periyodik olarak yaparak bilgilerin son halini tu
 
 # client2 
 
-**client** projesine yardımcı olmak için oluşturulmuştur.
+**client** projesinin bir kopyasi olup bazı yardımcı fonksiyonlar eklenmiştir.
 
  ## Projeden projeye rest istekleri nasil atılır ?
  
