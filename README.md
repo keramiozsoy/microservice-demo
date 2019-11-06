@@ -304,8 +304,10 @@ Bu kaydetme işlemini uygulama periyodik olarak yaparak bilgilerin son halini tu
  ```
  
  Örnek isteklerimizi yapalım.
- **client2** uygulamasıdaki **CallInfoController** sınıfına istek atarak,
- **client** uygulamasındaki **InfoController** sınıfına erişebileceğimizi görebiliriz.
+
+**client2** uygulamasıdaki **CallInfoController** sınıfına istek atarak,
+
+**client** uygulamasındaki **InfoController** sınıfına erişebileceğimizi görebiliriz.
  
  
  ```
