@@ -288,6 +288,16 @@ Bu kaydetme işlemini uygulama periyodik olarak yaparak bilgilerin son halini tu
  
  ### Spring Discovery ve RestTemplate beraber kullanarak
  
+ Projeden projeye ad,ip ve port gibi bilgiler yardımıyla istek atılmasını sağlar.
+ ```
+ https://github.com/keramiozsoy/microservice-demo/blob/master/client2/src/main/java/com/microservice/demo/client2/restTypes/TypeTwoRestTemplateClient.java
+ 
+ ```
+ 
+ ### Netflix Fiegn kullanarak
+ 
+ 
+ 
  
  
  
