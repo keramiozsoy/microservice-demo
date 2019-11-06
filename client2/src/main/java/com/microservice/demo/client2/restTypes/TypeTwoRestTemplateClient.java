@@ -1,10 +1,6 @@
 package com.microservice.demo.client2.restTypes;
 
-import java.net.InetAddress;
-import java.net.UnknownHostException;
-
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.cloud.config.environment.Environment;
 import org.springframework.context.annotation.Bean;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
