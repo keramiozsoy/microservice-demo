@@ -296,8 +296,11 @@ Bu kaydetme işlemini uygulama periyodik olarak yaparak bilgilerin son halini tu
  
  ### Netflix Fiegn kullanarak
  
- Java daki interface tanımlaması yapılarak projenin ismi yazılarak **service-discovery** üzerinden
+ Java daki **interface** tanımlaması yapılarak projenin ismi yazılarak **service-discovery** üzerinden
  port bilgisine otomatik ulaşılarak isteklerin atılmasını sağlar.
+ 
+ Projemizi çalıştırdığımız sınıfa **@EnableFeignClients** eklemeliyiz.
+ Bu yöntemin kullanıldığı her **interface** **@FeignClient** ile işaretlenmelidir.
  
  ```
  https://github.com/keramiozsoy/microservice-demo/blob/master/client2/src/main/java/com/microservice/demo/client2/restTypes/TypeThreeFeignClient.java
