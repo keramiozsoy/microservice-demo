@@ -296,13 +296,24 @@ Bu kaydetme işlemini uygulama periyodik olarak yaparak bilgilerin son halini tu
  
  ### Netflix Fiegn kullanarak
  
+ Java daki interface tanımlaması yapılarak projenin ismi yazılarak **service-discovery** üzerinden
+ port bilgisine otomatik ulaşılarak isteklerin atılmasını sağlar.
+ 
+ ```
+ https://github.com/keramiozsoy/microservice-demo/blob/master/client2/src/main/java/com/microservice/demo/client2/restTypes/TypeThreeFeignClient.java
+ ```
+ 
+ Örnek isteklerimizi yapalım.
+ **client2** uygulamasıdaki **CallInfoController** sınıfına istek atarak,
+ **client** uygulamasındaki **InfoController** sınıfına erişebileceğimizi görebiliriz.
  
  
+ ```
+curl --request GET http://localhost:8002/call/1
+curl --request GET http://localhost:8002/call/2
+curl --request GET http://localhost:8002/call/3
  
- 
- 
- 
- 
+ ```
  
  
 
