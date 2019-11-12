@@ -157,7 +157,7 @@ Projeye 8761 portundan erişilmektedir.
  - springboot 2.2 (SNAPSHOT) 
  - group : com.microservice.demo
  - artifact : servicediscovery
- - name : configserver
+ - name : servicediscovery
  - dependencies :  Eureka Server, Actuator
  
 ```
@@ -331,6 +331,24 @@ curl --request GET http://localhost:8002/call/3
     (Bu konu anlatılacak)
 
 # authorization-server
+
+Tüm ulaşılabilir projelerin bilgilerini diğer projelere güvenli şekilde açmak için 
+token, OAuth2 gibi yapıların kullanılmasını sağlayan projedir.
+Projeye 8003 portundan erişilmektedir.
+
+```
+
+    https://start.spring.io
+    
+ - gradle 5.4.1 
+ - java 1.8
+ - springboot 2.2 (SNAPSHOT) 
+ - group : com.microservice.demo
+ - artifact : authorizationserver
+ - name : authorizationserver
+ - dependencies :  Web, Security, Cloud OAuth2
+ 
+```
 
 
 
