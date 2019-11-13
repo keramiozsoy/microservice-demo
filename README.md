@@ -358,8 +358,10 @@ sınıfı işaretlemiş olduk. (bu kısmı tekrar araştıracağım bunlar farkl
 
 
 
-
+Doğru kullanıcılar ile **HTTP Auth** veya **Basic Auth** denilen yöntem ile deneme yapabiliriz. 
+Sadece url bilgisini tarayıcı üzerinden çağırarakta bu testi gerçekleştirebiliriz.
 ```
 curl -X GET -u user:secret http://localhost:8003/actuator/
+curl -X GET -u admin:secret http://localhost:8003/actuator/
 ```
 
