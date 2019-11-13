@@ -429,5 +429,7 @@ token:c57fcf48-1c8a-4206-9aaa-4a9a0e8dea2d
 }
 ```
 
+Artık herhangi bir uygulamamızı token mekanizması yardımıyla çalışabilmesi için tasarlayabiliriz.
+
 
 
