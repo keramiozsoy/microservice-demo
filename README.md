@@ -349,6 +349,16 @@ Projeye 8003 portundan erişilmektedir.
  - dependencies :  Web, Security, Cloud OAuth2
  
 ```
+**@EnableAuthorizationServer** ile token, şifreleme, kullanici adi ve şifre kontrollerinin yapıldığı 
+sınıfı işaretlemiş olduk. (bu kısmı tekrar araştıracağım bunlar farklı sınıf imlementasyonları ile yapılabilir mi ?)
+
+**@EnableWebSecurity** ile kullanici adi ve şifre kontrollerinin yapıldığı alt yapının oluşturulduğu 
+sınıfı işaretlemiş olduk. (bu kısmı tekrar araştıracağım bunlar farklı sınıf imlementasyonları ile yapılabilir mi ?)
+
+
+
+
+
 
 ```
 curl -X GET -u user:secret http://localhost:8003/actuator/
