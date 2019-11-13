@@ -350,8 +350,7 @@ Projeye 8003 portundan erişilmektedir.
  
 ```
 
-
-
-
-
+```
+curl -X GET -u user:secret http://localhost:8003/actuator/
+```
 
