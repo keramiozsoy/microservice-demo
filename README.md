@@ -365,3 +365,69 @@ curl -X GET -u user:secret http://localhost:8003/actuator/
 curl -X GET -u admin:secret http://localhost:8003/actuator/
 ```
 
+Yukarıda basitçe kimlik doğrulama mekanizması çalışıyormu kontrol ettik.
+
+Token mekanizmamız çalışmıyor mu kontrol edelim.
+
+```
+POSTMAN
+
+POST http://localhost:8003/oauth/token
+
+Authorization Tab
+Basic Auth 
+Username      : client
+Password      : password
+
+Body Tab
+
+username:admin
+password:secret
+grant_type:password
+
+İstek yap sonucu gör :)
+
+{
+    "access_token": "c57fcf48-1c8a-4206-9aaa-4a9a0e8dea2d",
+    "token_type": "bearer",
+    "refresh_token": "e6b87ec4-859f-4876-9adb-12335508effa",
+    "expires_in": 43052,
+    "scope": "read write"
+}
+
+```
+
+Alınan token bilgisinin kontrolü için isteklerimizi hazırlayalım.
+
+```
+POSTMAN
+
+POST http://localhost:8003/oauth/check_token
+
+Authorization Tab
+Basic Auth 
+Username      : client
+Password      : password
+
+Body Tab 
+token:c57fcf48-1c8a-4206-9aaa-4a9a0e8dea2d
+
+İstek yap sonucu gör :)
+
+{
+    "active": true,
+    "exp": 1573720277,
+    "user_name": "admin",
+    "authorities": [
+        "ROLE_ADMIN"
+    ],
+    "client_id": "client",
+    "scope": [
+        "read",
+        "write"
+    ]
+}
+```
+
+
+
