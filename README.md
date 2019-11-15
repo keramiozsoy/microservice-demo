@@ -352,7 +352,9 @@ Projeye 8100 portundan erişilmektedir.
 **@EnableAuthorizationServer** ile token, şifreleme, kullanici adi ve şifre kontrollerinin yapıldığı 
 sınıfı işaretlemiş olduk. (bu kısmı tekrar araştıracağım bunlar farklı sınıf imlementasyonları ile yapılabilir mi ?)
 
-**@EnableWebSecurity** ile kimlik doğrulama (**Authentication**) alt yapısı yani kullanıcı adi ve şifre kontrol mekanizmasının  yazıldığı  sınıfı işaretlemiş olduk. Ayrıca bu sınıf bize kimliği doğru olan kullanıcının hangi url bilgilerine erişme (**Authorization**) yetkisine sahip olduğunu tanımalaycak alt yapı sunmaktadır.   (bu kısmı tekrar araştıracağım bunlar farklı sınıf imlementasyonları ile yapılabilir mi ?)
+**@EnableWebSecurity** ile kimlik doğrulama (**Authentication**) alt yapısı yani kullanıcı adi ve şifre kontrol mekanizmasının  yazıldığı  sınıfı işaretlemiş olduk. Hangi kullanıcı hangi rolde bilgisini sağlamış olduk.
+
+Ayrıca bu sınıf bize kimliği doğru olan kullanıcının hangi url bilgilerine erişme (**Authorization**) yetkisine sahip olduğunu tanımalaycak alt yapı sunmaktadır.   (bu kısmı tekrar araştıracağım bunlar farklı sınıf imlementasyonları ile yapılabilir mi ?)
 
 
 
@@ -430,7 +432,6 @@ token:c57fcf48-1c8a-4206-9aaa-4a9a0e8dea2d
 ```
 
 Artık herhangi bir uygulamamızı token mekanizması yardımıyla çalışabilmesi için tasarlayabiliriz.
-
 
 
 # client3
