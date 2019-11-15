@@ -81,7 +81,7 @@ Projeye 8001 portundan erişilmektedir.
  - group : com.microservice.demo
  - artifact : client
  - name : client
- - dependencies : Config Client , Actuator , Web , Rest Repositories
+ - dependencies : Config Client , Actuator , Web , Rest Repositories, Eureka Discovery Client
  
 ```
 
@@ -346,7 +346,7 @@ Projeye 8100 portundan erişilmektedir.
  - group : com.microservice.demo
  - artifact : authorizationserver
  - name : authorizationserver
- - dependencies :  Web, Security, Cloud OAuth2
+ - dependencies :  Web, Security, Cloud OAuth2, Eureka Discovery Client
  
 ```
 **@EnableAuthorizationServer** ile token, şifreleme, kullanici adi ve şifre kontrollerinin yapıldığı 
