@@ -433,3 +433,48 @@ Artık herhangi bir uygulamamızı token mekanizması yardımıyla çalışabilm
 
 
 
+# client3
+
+Profil bilgilerine göre erişilebilecek url bilgilerinin alt yapısını sağlayan uygulamadır.
+Projeye 8003 portundan erişilmektedir.
+
+```
+
+    https://start.spring.io
+    
+ - gradle 5.4.1 
+ - java 1.8
+ - springboot 2.2 (SNAPSHOT) 
+ - group : com.microservice.demo
+ - artifact : client
+ - name : client
+ - dependencies :  Eureka Discovery Client, Actuator, Web,  Security, Cloud OAuth2
+ 
+```
+
+Aşağıdaki url bilgisinde herhangi bir kısıtlama yoktur.
+
+```
+curl -X GET http://localhost:8003/public
+```
+
+Aşağıdaki url bilgisine ulaşmak için o kullanıcıya ait **token** ile istek yapılmalıdır.
+
+```
+curl -X GET http://localhost:8003/admin  -H 'Authorization: Bearer b9e5985f-dce0-410d-ac29-fdbd02fa4653'
+```
+veya
+
+```
+POSTMAN
+
+POST http://localhost:8003/admin
+
+Headers Tab
+
+Authorization:Bearer b9e5985f-dce0-410d-ac29-fdbd02fa4653
+
+İstek yap sonucu gör :)
+````
+
+
