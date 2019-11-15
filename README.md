@@ -254,6 +254,24 @@ Ayrıca **client** kendinden farklı uygulamalardan istekleri alip cevaplayabile
 Peki neden böyle bir şeye ihtiyaç var?
  
  
+# client2
+Projeye 8002 portundan erişilmektedir.
+
+```
+
+    https://start.spring.io
+    
+ - gradle 5.4.1 
+ - java 1.8
+ - springboot 2.2 (SNAPSHOT) 
+ - group : com.microservice.demo
+ - artifact : client
+ - name : client
+ - dependencies :  Eureka Discovery Client, Actuator, Web
+ 
+
+
+
 **client2** isimli bir uygulama *client* isimli uygulamaya erişmek için istek atsın. 
 **service-discovery** bu iki uygulamanin yerlerini ve portlarini bilmektedir.
 
