@@ -271,9 +271,9 @@ Projeye 8002 portundan erişilmektedir.
  - dependencies :  Eureka Discovery Client, Actuator, Web, openfeign
 ``` 
 
+**client** projesinin bir kopyasi olup bazı yardımcı fonksiyonlar eklenmiştir.
 
-
-**client2** isimli bir uygulama *client* isimli uygulamaya erişmek için istek atsın. 
+**client2** isimli bir uygulama **client** isimli uygulamaya erişmek için istek atsın. 
 **service-discovery** bu iki uygulamanin yerlerini ve portlarini bilmektedir.
 
 **client2** uygulaması **client** uygulamasının ulaşım bilgilerini **service-discovery** den 
@@ -282,10 +282,6 @@ Bu kaydetme işlemini uygulama periyodik olarak yaparak bilgilerin son halini tu
  
 **netflix-ribbon** daha sonraki aşamalarda ayrıntılı açıklanacaktır.
   
-
-# client2 
-
-**client** projesinin bir kopyasi olup bazı yardımcı fonksiyonlar eklenmiştir.
 
  ## Spring kullanırken projeden projeye rest isteklerini nasil atabiliriz ?
  
