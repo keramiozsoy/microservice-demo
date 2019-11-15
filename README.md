@@ -2,6 +2,15 @@
 
 Java dilinde basit mikroservisler ile çalışan mimari geliştirmeye çalışalım..
 
+ Proje | Port |
+| --- | --- |
+| config server        | 8000 |
+| discovery server     | 8761 |
+| authorization server | 8100 |
+| client               | 8001 |
+| client2              | 8002 |
+| client3              | 8003 |
+
 # microservice-demo-config-server-repo 
 
 Projemizdeki development, production ortamlarına özel konfigürasyon(properties) dosyaları içeren depodur.
