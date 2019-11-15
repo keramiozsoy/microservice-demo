@@ -269,7 +269,7 @@ Projeye 8002 portundan erişilmektedir.
  - artifact : client
  - name : client
  - dependencies :  Eureka Discovery Client, Actuator, Web, openfeign
- 
+``` 
 
 
 
