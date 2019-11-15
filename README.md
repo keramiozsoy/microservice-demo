@@ -255,6 +255,7 @@ Peki neden böyle bir şeye ihtiyaç var?
  
  
 # client2
+3 farklı türdeki web servis isteği atma yöntemini örneklediğimiz uygulamadır.
 Projeye 8002 portundan erişilmektedir.
 
 ```
@@ -267,7 +268,7 @@ Projeye 8002 portundan erişilmektedir.
  - group : com.microservice.demo
  - artifact : client
  - name : client
- - dependencies :  Eureka Discovery Client, Actuator, Web
+ - dependencies :  Eureka Discovery Client, Actuator, Web, openfeign
  
 
 
