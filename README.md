@@ -334,7 +334,7 @@ curl --request GET http://localhost:8002/call/3
 
 Tüm ulaşılabilir projelerin bilgilerini diğer projelere güvenli şekilde açmak için 
 token, OAuth2 gibi yapıların kullanılmasını sağlayan projedir.
-Projeye 8003 portundan erişilmektedir.
+Projeye 8100 portundan erişilmektedir.
 
 ```
 
@@ -361,8 +361,8 @@ sınıfı işaretlemiş olduk. (bu kısmı tekrar araştıracağım bunlar farkl
 Doğru kullanıcılar ile **HTTP Auth** veya **Basic Auth** denilen yöntem ile deneme yapabiliriz. 
 Sadece url bilgisini tarayıcı üzerinden çağırarakta bu testi gerçekleştirebiliriz.
 ```
-curl -X GET -u user:secret http://localhost:8003/actuator/
-curl -X GET -u admin:secret http://localhost:8003/actuator/
+curl -X GET -u user:secret http://localhost:8100/actuator/
+curl -X GET -u admin:secret http://localhost:8100/actuator/
 ```
 
 Yukarıda basitçe kimlik doğrulama mekanizması çalışıyormu kontrol ettik.
@@ -372,7 +372,7 @@ Token mekanizmamız çalışmıyor mu kontrol edelim.
 ```
 POSTMAN
 
-POST http://localhost:8003/oauth/token
+POST http://localhost:8100/oauth/token
 
 Authorization Tab
 Basic Auth 
@@ -402,7 +402,7 @@ Alınan token bilgisinin kontrolü için isteklerimizi hazırlayalım.
 ```
 POSTMAN
 
-POST http://localhost:8003/oauth/check_token
+POST http://localhost:8100/oauth/check_token
 
 Authorization Tab
 Basic Auth 
