@@ -502,4 +502,6 @@ Authorization:Bearer b9e5985f-dce0-410d-ac29-fdbd02fa4653
 İstek yap sonucu gör :)
 ````
 
+auth ile ilgili anotasyonlar açıklanacaktır.
+
 
