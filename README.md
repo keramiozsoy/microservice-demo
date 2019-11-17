@@ -505,6 +505,19 @@ Authorization:Bearer b9e5985f-dce0-410d-ac29-fdbd02fa4653
 İstek yap sonucu gör :)
 ````
 
-auth ile ilgili anotasyonlar açıklanacaktır.
+
+**authorization-server** uygulamasında istek atarken kimlik doğrulama için kullanıcı adı ve şifre
+manuel olarak giriliyor ve bu değerler doğru ise ve istek atılan kullanıcının rol ve yetkisi yeterli
+ise cevap dönüşü sağlanıyordu.
+
+Bu durumu bir uygulama üzerinden otomatikleştirmek için **client3** uygulamamıza şu satırları ekledik
 
 
+```
+https://github.com/keramiozsoy/microservice-demo/blob/master/authorizationserver/src/main/resources/bootstrap.properties
+
+security.oauth2.client.client-id=client
+security.oauth2.client.client-secret=password
+security.oauth2.resource.token-info-uri=http://localhost:8100/oauth/check_token
+
+```
