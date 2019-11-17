@@ -373,6 +373,9 @@ Projeye 8100 portundan erişilmektedir.
  - dependencies :  Web, Security, Cloud OAuth2, Eureka Discovery Client
  
 ```
+
+Önceki projelerde olduğu gibi **@EnableEurekaClient** ile kendini **service-discovery** projesine kayıt yaptırmış oluyor.
+ 
 **@EnableAuthorizationServer** ile token, şifreleme, kullanici adi ve şifre kontrollerinin yapıldığı 
 sınıfı işaretlemiş olduk. (bu kısmı tekrar araştıracağım bunlar farklı sınıf imlementasyonları ile yapılabilir mi ?)
 
