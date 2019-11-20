@@ -346,13 +346,7 @@ curl --request GET http://localhost:8002/call/3
  ```
  
  Yukarıdaki yöntemlerden sadece birini seçerek tüm projenizdeki isteklerin çalışmasını sağlayabilirsiniz.
- 
 
-# Netflix Hystrix
-
-    https://github.com/Netflix/Hystrix
-    
-    (Bu konu anlatılacak)
 
 # authorization-server
 
@@ -521,3 +515,9 @@ security.oauth2.client.client-secret=password
 security.oauth2.resource.token-info-uri=http://localhost:8100/oauth/check_token
 
 ```
+
+# Netflix Hystrix
+
+    https://github.com/Netflix/Hystrix
+    
+    (Bu konu anlatılacak)
