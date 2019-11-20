@@ -1,6 +1,6 @@
 # microservice-demo application
 
-Java dilinde mimari edilen basit mikroservisler geliştirmeye çalışalım :)
+Basit projeler ile mikroservis konusundaki yaklaşımları anlamaya çalışalım :)
 
  Proje | Port |
 | --- | --- |
