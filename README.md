@@ -520,4 +520,4 @@ security.oauth2.resource.token-info-uri=http://localhost:8100/oauth/check_token
 
     https://github.com/Netflix/Hystrix
     
-    (Bu konu anlatılacak)
+    fallback anlatilacak
