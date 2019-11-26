@@ -11,6 +11,17 @@ Basit projeler ile mikroservis konusundaki yaklaşımları anlamaya çalışalı
 | client2              | 8002 |
 | client3              | 8003 |
 
+[microservice-demo-config-server-repo](#microservice-demo-config-server-repo)
+[config-server](#config-server)
+[client](#client)
+[service-discovery](#service-discovery)
+[client2](#client2)
+[authorization-server](#authorization-server)
+[client3](#)
+[](#)
+[](#)
+[](#)
+
 # microservice-demo-config-server-repo 
 
 Projemizdeki development, production ortamlarına özel konfigürasyon(properties) dosyaları içeren depodur.
