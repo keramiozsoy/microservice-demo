@@ -11,19 +11,22 @@ Basit projeler ile mikroservis konusundaki yaklaşımları anlamaya çalışalı
 | client2              | 8002 |
 | client3              | 8003 |
 
-[microservice-demo-config-server-repo](#microservice-demo-config-server-repo)
 
-[config-server](#config-server)
+# Linkler
 
-[client](#client)
+- [microservice-demo-config-server-repo](#microservice-demo-config-server-repo)
 
-[service-discovery](#service-discovery)
+- [config-server](#config-server)
 
-[client2](#client2)
+- [client](#client)
 
-[authorization-server](#authorization-server)
+- [service-discovery](#service-discovery)
 
-[client3](#)
+- [client2](#client2)
+
+- [authorization-server](#authorization-server)
+
+- [client3](#client3)
 
 [](#)
 [](#)
